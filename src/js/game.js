@@ -5,9 +5,9 @@ function orderByProps(obj, sortOrder) {
 	for (const key in obj) {
 		const newObj = { key: key, value: obj[key] };
 
-		if(sortOrder.includes(key)) {
+		if (sortOrder.includes(key)) {
 			sortedArr.push(newObj);
-		} else{
+		} else {
 			abcSortedArr.push(newObj);
 		}
 	}
@@ -18,7 +18,7 @@ function orderByProps(obj, sortOrder) {
 		}
 		return -1;
 	});
-	
+
 	const arr = [...sortedArr, ...abcSortedArr];
 	return arr;
 }
